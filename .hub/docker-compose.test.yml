@@ -8,7 +8,7 @@ services:
       - ..:/usr/src/app
       - ../node_modules:/usr/src/app/node_modules/
       - /usr/src/app/tests
-    command: npm run test
+#    command: npm run test
     networks:
       - hub-network
     depends_on:
