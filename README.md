@@ -23,6 +23,10 @@ Abaixo está a descrição do que deve ser feito:
 }
 ```
 
+### Requisito Bônus
+
+- [ ]  Implementar a rota de deltar task
+
 Para conseguir testar se tudo está funcionando, você precisará:
 
 1. Rodar o banco de dados em um terminal
