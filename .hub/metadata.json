@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "test": "bash ./.hub/startup.sh",
+    "setup": "npm i"
+  }
+}
