@@ -6,11 +6,22 @@ Depois de ver como async/await deixa o código muito mais legível que deixar v�
 
 Você também percebeu que o estagiário, apagou sem querer a parte de conexão do mongodb dentro do arquivo `app.js`
 
-Primeiramente crie a conexão novamente com o mongodb dentro do arquivo `src/app.js` colocando o `mongoclient` dentro da variável `db` que já está no código. Não esqueça de fazer essa conexão utilizando `async`/`await` e `try`/`catch`
+### Requisitos
 
-Em segundo lugar refatore as funções das rotas de **tasks** do arquivo `src/app.js`, retirando `then` e `catch` para utilizar `async`/`await` dentro de blocos `try`/`catch`.
+Abaixo está a descrição do que deve ser feito:
 
-Por fim implemente a função da rota de cadastrar **tasks**
+- [ ]  Implementar conexão com o mongo dentro do arquivo `src/app.js`
+- [ ]  A conexão com o mongoClient deve ser colocada na `const db` no arquivo `app.js`
+- [ ]  Remover todos os `then` e `catch`, substituindo por `Async/Await` e `Try/Catch`
+- [ ]  Implementar a função de cadastrar task da rota `POST /tasks`
+    - Abaixo segue o formato do cadastro do objeto da tasks
+    
+```jsx
+{
+  titulo: "Fazer bolo",
+  descricao: "Devo ir no mercado comprar leite, massa de bolo e achocolatado",
+}
+```
 
 Para conseguir testar se tudo está funcionando, você precisará:
 
