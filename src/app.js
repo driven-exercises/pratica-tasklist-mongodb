@@ -6,14 +6,10 @@ const app = express();
 app.use(express.json());
 dotenv.config();
 
-const mongoClient = new MongoClient(process.env.MONGO_URI);
-try {
-  await mongoClient.connect()
-} catch (err) {
-  console.log(err.message)
-}
+// Faça a conexão com o mongodb aqui
 
-const db = mongoClient.db("tasklist");
+// Coloque o mongoclient de conexão com o banco de dados nessa variavel
+const db = null;
 
 /* Tasks Routes */
 
