@@ -6,34 +6,36 @@ Depois de ver como async/await deixa o código muito mais legível que deixar v�
 
 Você também percebeu que o estagiário, apagou sem querer a parte de conexão do mongodb dentro do arquivo `app.js`
 
-### Requisitos
+## 🎲 Formato dos Dados
 
-Abaixo está a descrição do que deve ser feito:
+As tarefas da aplicação devem possuir o seguinte formato:
 
-- [ ]  Implementar conexão com o mongo dentro do arquivo `src/app.js`
-- [ ]  A conexão com o mongoClient deve ser colocada na `const db` no arquivo `app.js`
-- [ ]  Remover todos os `then` e `catch`, substituindo por `Async/Await` e `Try/Catch`
-- [ ]  Implementar a função de cadastrar task da rota `POST /tasks`
-    - Abaixo segue o formato do cadastro do objeto da tasks
-    
 ```jsx
 {
-  titulo: "Fazer bolo",
-  descricao: "Devo ir no mercado comprar leite, massa de bolo e achocolatado",
+	titulo: "Fazer bolo",
+	descricao: "Devo ir no mercado comprar leite, massa de bolo e achocolatado",
 }
 ```
 
-### Requisito Bônus
+## ✅ Requisitos
 
-- [ ]  Implementar a rota de deltar task
+- [ ]  Implementar conexão com o mongo dentro do arquivo `src/app.js`
+    - [ ]  A conexão com o mongoClient deve ser colocada na `const db` no arquivo `app.js`
+- [ ]  Remover todos os `then` e `catch`, substituindo por `Async/Await` e `Try/Catch`
+- [ ]  Implementar a função de cadastrar task da rota **POST** `/tasks`
+    - [ ]  Não permita que duas tasks com o mesmo título sejam adicionadas.
+    - [ ]  Faça as validações para verificar se todos os campos do `body` existem.
+
+## ☑️ Bônus
+
+- [ ]  Implementar um endpoint que delete uma task à partir do seu id, **DELETE** `/task/:id`, lembrando-se de fazer um tratamento de erro caso o id informado não exista
+- [ ]  Implemente as validações de todos os endpoints utilizando a biblioteca [joi](https://joi.dev/api/?v=17.9.1).
+
+
+## 🧪 Testando o funcionamento da aplicação
 
 Para conseguir testar se tudo está funcionando, você precisará:
 
 1. Rodar o banco de dados em um terminal
 2. Rodar a aplicação em outro terminal
 3. Utilizar o ThunderClient para fazer as requisições.
-
-O formato dos dados esperados para uma task é:
-
-- titulo, string;
-- descricao, string;
